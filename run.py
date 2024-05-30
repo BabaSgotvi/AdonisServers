@@ -28,7 +28,7 @@ def post_function():
     data = request.json  # Parse the incoming JSON request
     user_message = data.get('userMessage')  # Extract the user message from the JSON data
     generated_text = pipe(user_message, max_length=100)
-    # Example response
+    print(generated_text)
     response = {
         'message': 'Data received',
         'data': 'response: ' + generated_text
