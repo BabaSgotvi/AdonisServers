@@ -9,7 +9,7 @@ COPY . /app
 
 # RUN pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 # RUN pip install transformers
-# RUN pip install flask
+RUN pip install flask
 
 # Run the specified Python script
 CMD ["python", "run.py"]
