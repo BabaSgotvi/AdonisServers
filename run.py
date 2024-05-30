@@ -35,3 +35,9 @@ def post_function():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+
+while True:
+    cli_response = input("Enter command:\n")
+    if cli_response.lower() == "exit" or cli_response.lower() == "quit":
+        print("Exiting the program.")
+        break
