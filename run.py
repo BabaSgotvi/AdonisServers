@@ -18,6 +18,7 @@
 # if __name__ == '__main__':
 #     app.run(host='0.0.0.0', port=5000)
 from flask import Flask, request, jsonify
+from transformers import pipeline
 print("Running!")
 pipe = pipeline("text-generation", model="gpt2")
 app = Flask(__name__)
@@ -30,7 +31,7 @@ def post_function():
     # Example response
     response = {
         'message': 'Data received',
-        'data': 'response: ' + generated_text  # Just echoing the received message for simplicity
+        'data': 'response: ' + generated_text
     }
     return jsonify(response)
 
